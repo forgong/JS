@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            for (var value = 1; value < 5; value++){
+                alert(value + '번째 반복문');
+            }
+            /////
+
+            var array = ['포도', '사과', '바나나', '망고'];
+            for (var i = 0; i < array.length; i++){
+                alert(array[i]);
+            }
+            /////
+            
+            var startTime = new Date().getTime();
+            for(var cps = 0; new Date().getTime() < startTime + 1000; cps++){}
+            alert('초 당 연산 횟수 : ' + cps);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
