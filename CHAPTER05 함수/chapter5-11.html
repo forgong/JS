@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            setTimeout(function (){
+                alert('3초가 지났습니다.');
+            }, 3000);
+
+            var intervalID = setInterval(function (){
+                alert('<p>' + new Date() + '</p>');
+            }, 1000);
+
+            setTimeout(function(){
+                clearInterval(intervalID);
+            }, 1000)
+            /////
+
+            var URI = 'http://hanbit.co.kr?test=한글입니다';
+            var output = '';
+            output += 'escape()\n';
+            output += escape(URI) + '\n\n';
+            output += 'encodeURI()\n';
+            output += encodeURI(URI) + '\n\n';
+            output += 'encodeURIComponent()\n';
+            output += encodeURIComponent(URI) + '\n\n';
+
+            alert(output);
+            /////
+
+            var willEval = '';
+            willEval += 'var number = 10;';
+            willEval += 'alert(number);';
+
+            eval(willEval);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

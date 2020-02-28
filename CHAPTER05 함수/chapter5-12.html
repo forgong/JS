@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            alert('A');
+            setTimeout(function(){
+                alert('B');
+            },0);
+            alert('C');
+            /////
+
+            for (var i = 0; i < 3; i++){
+                (function (closed_i){
+                    setTimeout(function(){
+                        alert(closed_i);
+                    },0)
+                })(i);
+            }
+
+            [0, 1, 2].forEach(function(i){
+                setTimeout(function(){
+                    alert(i);
+                }, 0);
+            });
+            /////
+
+            function test(a, b, c){
+                if (!b){
+                    b = 52;
+                }
+                if (!c){
+                    c = 273;
+                }
+                alert(a + ':' + b + ':' + c);
+            }
+            test(1,2);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
