@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var students = [];
+            students.push({ 이름 : '윤인성', 국어 : 87, 수학 : 98, 영어 : 88, 과학 : 95})
+            students.push({ 이름 : '연하진', 국어 : 85, 수학 : 95, 영어 : 93, 과학 : 97})
+            students.push({ 이름 : '구지연', 국어 : 76, 수학 : 70, 영어 : 88, 과학 : 80})
+
+            for (var i in students) {
+                students[i].getSum = function(){
+                    return this.국어 + this.수학 + this.영어 + this.과학;
+                };
+
+                students[i].getAverage = function(){
+                    return this.getSum() / 4;
+                };
+            }
+
+            var output = '이름\t총점\t평균\n';
+            for (var i in students){
+                with(students[i]){
+                    output += 이름 + '\t' + getSum() + '\t' + getAverage() + '\n';
+                }
+            }
+            alert(output);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
